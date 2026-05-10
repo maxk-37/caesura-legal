@@ -1,54 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Privacy Policy — Caesura</title>
-    <style>
-          :root { color-scheme: light dark; }
-          body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 760px; margin: 3rem auto; padding: 0 1.5rem; line-height: 1.6; }
-          h1 { margin-bottom: 0.25rem; }
-          h2 { margin-top: 2rem; }
-          .meta { color: #666; }
-          a { color: #0366d6; }
-          nav { margin-bottom: 2rem; font-size: 0.95rem; }
-          footer { margin-top: 3rem; color: #888; font-size: 0.9rem; }
-        </style>
-  </head>
-  <body>
-      <nav><a href="./index.html">← Back to home</a>a></nav>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Caesura</title>
+  <meta name="description" content="Privacy policy for Caesura — a voice journal that keeps your recordings and transcripts on your device.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://YOUR-DOMAIN.example/privacy">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1a1a1a;
+      --muted: #595959;
+      --rule: #e5e5e5;
+      --accent: #0a4d8c;
+      --code-bg: #f4f4f4;
+      --table-header-bg: #fafafa;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --fg: #e8e8e8;
+        --muted: #a0a0a0;
+        --rule: #2c2c2c;
+        --accent: #6cb1f0;
+        --code-bg: #1e1e1e;
+        --table-header-bg: #1a1a1a;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0 0 8px;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      line-height: 1.3;
+      margin: 48px 0 16px;
+      letter-spacing: -0.01em;
+      padding-top: 8px;
+      border-top: 1px solid var(--rule);
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      line-height: 1.4;
+      margin: 28px 0 12px;
+    }
+
+    p, ul, ol, table {
+      margin: 0 0 16px;
+    }
+
+    ul, ol {
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9em;
+      background: var(--code-bg);
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+
+    strong { font-weight: 600; }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      margin: 32px 0;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 32px;
+    }
+
+    .meta div { margin-bottom: 4px; }
+
+    .summary {
+      background: var(--code-bg);
+      border-left: 3px solid var(--accent);
+      padding: 20px 24px;
+      border-radius: 4px;
+      margin: 24px 0 32px;
+    }
+
+    .summary h2 {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+
+    .summary p:last-child { margin-bottom: 0; }
+
+    .placeholder {
+      background: rgba(255, 200, 0, 0.18);
+      padding: 1px 4px;
+      border-radius: 3px;
+      font-style: italic;
+      color: var(--fg);
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 0 0 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    th {
+      background: var(--table-header-bg);
+      font-weight: 600;
+      border-bottom: 2px solid var(--rule);
+    }
+
+    @media (max-width: 480px) {
+      main { padding: 32px 18px 64px; }
+      body { font-size: 16px; }
+      h1 { font-size: 1.6rem; }
+      h2 { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: May 10, 2026</p>p>
-  
-    <p>This Privacy Policy describes how Caesura (“we”, “us”, or “our”) collects, uses, and protects your information when you use our application and related services (the “Service”).</p>
-  
-    <h2>Information We Collect</h2>
-    <p>We may collect information you provide directly (such as account details or feedback) and information collected automatically (such as device identifiers, app usage analytics, and crash logs) to operate and improve the Service.</p>
-  
-    <h2>How We Use Information</h2>
-    <p>We use collected information to provide, maintain, and improve the Service, to communicate with you, to ensure security, and to comply with legal obligations.</p>
-  
-    <h2>Sharing of Information</h2>
-    <p>We do not sell your personal information. We may share information with service providers who process data on our behalf, or when required by law.</p>
-  
-    <h2>Data Retention</h2>
-    <p>We retain personal information only for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required by law.</p>
-  
-    <h2>Your Rights</h2>
-    <p>Depending on your jurisdiction, you may have rights to access, correct, delete, or export your personal information. To exercise these rights, contact us using the details below.</p>
-  
-    <h2>Children’s Privacy</h2>
-    <p>The Service is not directed to children under 13, and we do not knowingly collect personal information from children under 13.</p>
-  
-    <h2>Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. The “Last updated” date at the top will reflect the most recent changes.</p>
-  
-    <h2>Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy, please visit our <a href="./support.html">support page</a>a>.</p>
-  
-    <footer>&copy; Caesura. All rights reserved.</footer>
-  </body>
-</html>html></footer></p></p></h1></nav>
-  </body>
-    </style></title>
-  </head>
+
+    <div class="meta">
+      <div><strong>App:</strong> Caesura</div>
+      <div><strong>Effective date:</strong> <span class="placeholder">[TO BE SET ON PUBLISH — recommended: the date the first build with analytics is submitted to App Store Connect]</span></div>
+      <div><strong>Last updated:</strong> 10 May 2026</div>
+    </div>
+
+    <section class="summary" aria-label="Summary">
+      <h2>The short version</h2>
+      <p>Caesura is a voice journal for the moments between tasks. It's built to keep what's most personal — your voice and your transcripts — on your phone, where it belongs.</p>
+      <ul>
+        <li><strong>Your voice recordings and transcripts never leave your device.</strong> They are stored locally in the iOS app sandbox. We have no copy. We cannot read them. We cannot recover them if you uninstall.</li>
+        <li><strong>We collect a small amount of anonymous usage data</strong> — things like "a capture was started" or "the timeline was opened" — to understand whether the app is helping people and where it's getting stuck. This is sent to our analytics database (Supabase). It is not linked to your name, email, or Apple ID.</li>
+        <li><strong>In the EU, EEA, and UK, this analytics is OFF by default.</strong> You have to turn it on in Settings if you want to share it. Everywhere else, it is ON by default and you can turn it off in Settings at any time.</li>
+        <li><strong>You can delete everything we have on you</strong> with one button in Settings.</li>
+        <li><strong>We do not advertise. We do not sell or share your data. We do not use it to train AI models.</strong></li>
+      </ul>
+      <p>If you want the details, they're below.</p>
+    </section>
+
+    <h2 id="who-we-are">1. Who we are</h2>
+    <p>Caesura is built and operated by an independent developer ("we", "us", "our"). For privacy questions, data subject requests, or anything else covered by this policy, contact us at:</p>
+    <p><strong><span class="placeholder">[hello@YOUR-DOMAIN.example]</span></strong> <em>(replace with the real address before publishing — must be monitored by a human)</em></p>
+    <p>If you are in the EU/EEA or UK, you can use this address to exercise your rights under the General Data Protection Regulation (GDPR) and the UK GDPR.</p>
+
+    <h2 id="on-device">2. Data that stays on your device</h2>
+    <p>The following information is created and stored only on your iPhone, iPad, or Apple Watch. It does not leave your device. We have no copy of it on any server.</p>
+    <ul>
+      <li>Audio recordings of your voice captures.</li>
+      <li>Transcripts of those recordings.</li>
+      <li>Tags, edits, and any notes you attach to entries.</li>
+      <li>The full timeline of your captures.</li>
+    </ul>
+    <p>This data lives in the app's local storage (SwiftData) and the iOS Keychain. If you uninstall Caesura, this data is deleted by iOS along with the app. We cannot recover it for you.</p>
+    <p>iOS may include this data in your device's iCloud backup if you have iCloud Backup enabled. That backup is governed by Apple's privacy policy, not ours, and is encrypted in transit and at rest by Apple.</p>
+
+    <h2 id="analytics">3. Data we do collect (anonymous usage analytics)</h2>
+    <p>To understand whether Caesura is working — and where it isn't — we collect a small set of anonymous usage events. This is what we collect and what we do not collect.</p>
+
+    <h3>What we collect</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Field</th><th>Example</th><th>Why</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pseudonymous device identifier</td>
+            <td>A random UUID generated on your device on first launch (e.g. <code>a1b2c3d4-…</code>)</td>
+            <td>To group events from the same device so we can compute things like "median captures per day per user"</td>
+          </tr>
+          <tr>
+            <td>Event type</td>
+            <td><code>captureStarted</code>, <code>captureSaved</code>, <code>timelineOpened</code>, <code>promptShown</code>, <code>promptTapped</code></td>
+            <td>To understand what people use and what they ignore</td>
+          </tr>
+          <tr>
+            <td>Capture source</td>
+            <td><code>widget</code>, <code>watch</code>, <code>share-extension</code>, <code>in-app</code></td>
+            <td>To know which entry points are actually used</td>
+          </tr>
+          <tr>
+            <td>Event timestamp</td>
+            <td>An ISO-8601 timestamp from your device</td>
+            <td>To compute trends over time</td>
+          </tr>
+          <tr>
+            <td>App version</td>
+            <td><code>1.0.0</code></td>
+            <td>To separate behavior across versions and to detect regressions</td>
+          </tr>
+          <tr>
+            <td>iOS / watchOS version</td>
+            <td><code>iOS 18.4</code></td>
+            <td>To diagnose OS-specific issues</td>
+          </tr>
+          <tr>
+            <td>Pro entitlement status</td>
+            <td><code>true</code> / <code>false</code></td>
+            <td>To distinguish free-tier behavior from paid behavior in aggregate</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>What we do NOT collect</h3>
+    <ul>
+      <li>Your name, email address, phone number, or Apple ID.</li>
+      <li>Your voice recordings or any audio data.</li>
+      <li>Your transcripts or the contents of any entry.</li>
+      <li>Your location (we do not request location permissions).</li>
+      <li>Your contacts, calendar, photos, or any other personal data on your device.</li>
+      <li>Any advertising or tracking identifiers (we do not use the Apple Advertising Identifier).</li>
+      <li>Any data from third parties.</li>
+    </ul>
+
+    <h3>Legal basis (EU/EEA/UK)</h3>
+    <p>For users in the EU, EEA, and UK, our legal basis for processing this analytics data is <strong>your consent</strong> under GDPR Article 6(1)(a) and the relevant national implementations of the ePrivacy Directive (EU) and the Privacy and Electronic Communications Regulations (UK). You provide that consent by toggling analytics ON in Settings. You can withdraw it at any time by toggling it back OFF.</p>
+    <p>For users outside those regions, the legal basis is our <strong>legitimate interest</strong> under GDPR Article 6(1)(f) in improving the app and understanding how it is used, balanced against the minimal nature of the data and the fact that no personal identifiers are collected. You can object to this processing at any time by toggling analytics OFF in Settings.</p>
+
+    <h2 id="defaults">4. Default behavior — region-aware</h2>
+    <p>When you first launch Caesura, we set the analytics toggle as follows, based on the region your iPhone is configured for (Settings → General → Language &amp; Region):</p>
+    <ul>
+      <li><strong>EU member states, EEA (Iceland, Liechtenstein, Norway), and the United Kingdom: analytics is OFF by default.</strong> You can turn it on in Settings → Privacy → Anonymous analytics.</li>
+      <li><strong>Everywhere else: analytics is ON by default.</strong> You can turn it off in Settings → Privacy → Anonymous analytics.</li>
+    </ul>
+    <p>This split exists because EU and UK consent rules require prior, informed, opt-in consent for non-essential analytics. Outside those jurisdictions, the legal regime allows opt-out.</p>
+    <p>The default is computed once on first launch and saved. If you later travel or change your device's region, the toggle does not flip — your previous choice is respected. You can always change it manually in Settings.</p>
+
+    <h2 id="retention">5. How long we keep analytics data</h2>
+    <p>Analytics events are kept for a maximum of <strong>90 days</strong> from the date the event occurred. After that, they are deleted from the analytics database. This applies to all users, regardless of region.</p>
+    <p>We may keep aggregated counts (for example, "total daily active devices in March") indefinitely. Aggregated counts cannot be linked back to any individual device.</p>
+
+    <h2 id="storage">6. Where the data is stored</h2>
+    <p>Analytics data is stored in <a href="https://supabase.com">Supabase</a>, a hosted Postgres provider. Our project is configured in the <strong><span class="placeholder">[US-East / EU-West — confirm your actual Supabase region before publishing]</span></strong> region.</p>
+    <p>If you are in the EU/EEA/UK and our project is hosted in the US, the transfer to the United States relies on Supabase's Standard Contractual Clauses (SCCs) under GDPR Article 46. If you would prefer your data not to be transferred, you can keep analytics OFF (which is the default in your region anyway) or use the "Delete my analytics data" button to remove anything that has already been sent.</p>
+    <p>We do not use any other third-party processors for the analytics pipeline. The data is not shared with anyone.</p>
+
+    <h2 id="rights">7. Your rights and how to exercise them</h2>
+
+    <h3>Available to all users — directly in the app</h3>
+    <ul>
+      <li><strong>Turn analytics off</strong> at any time: Settings → Privacy → Anonymous analytics.</li>
+      <li><strong>Delete everything we have on you</strong>: Settings → Privacy → Delete my analytics data. This sends a delete request to our database, removes any local copy of your event log, and rotates your pseudonymous device identifier so that any future events (if you re-enable analytics) cannot be linked to anything from before.</li>
+    </ul>
+
+    <h3>Additional rights for EU/EEA/UK residents (GDPR / UK GDPR)</h3>
+    <p>You have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> the data we hold about your device (Article 15).</li>
+      <li><strong>Rectify</strong> inaccurate data (Article 16).</li>
+      <li><strong>Erase</strong> your data (Article 17) — the in-app delete button satisfies this, but you can also email us.</li>
+      <li><strong>Restrict</strong> processing (Article 18).</li>
+      <li><strong>Object</strong> to processing based on legitimate interests (Article 21).</li>
+      <li><strong>Data portability</strong> (Article 20) — we can export your event history as JSON on request.</li>
+      <li><strong>Withdraw consent</strong> at any time without affecting the lawfulness of prior processing.</li>
+      <li><strong>Lodge a complaint</strong> with your national supervisory authority. A list is at <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en">edpb.europa.eu/about-edpb/about-edpb/members_en</a>. UK residents can complain to the Information Commissioner's Office at <a href="https://ico.org.uk">ico.org.uk</a>.</li>
+    </ul>
+    <p>To exercise any of these by email rather than in-app, write to us at the address in Section 1. To verify the request, you'll need to include the pseudonymous identifier shown in the in-app debug panel (Settings → tap the version number five times → "Copy user ID").</p>
+
+    <h3>Additional rights for California residents (CCPA / CPRA)</h3>
+    <p>We do not "sell" or "share" personal information as those terms are defined under the CCPA. We do not process sensitive personal information for purposes that would trigger the right to limit. You have the right to know what we collect (this section), the right to delete (the in-app button), and the right to non-discrimination for exercising those rights. We will not deny service, charge different prices, or degrade quality based on a privacy choice.</p>
+
+    <h2 id="children">8. Children</h2>
+    <p>Caesura is not directed at children under 13 (or under 16 in the EU/EEA/UK). We do not knowingly collect data from children. If you believe a child has used the app, contact us and we will delete any associated data.</p>
+
+    <h2 id="security">9. Security</h2>
+    <p>Analytics data in transit is encrypted with TLS. At rest, it is stored in Postgres on infrastructure managed by Supabase (which uses AES-256 encryption at rest by default). Access to the database is restricted to the developer using a service role key that is not shipped in the app.</p>
+    <p>We have implemented row-level security so that the public app credentials can only insert events — they cannot read, modify, or delete any data. This means a copy of the app cannot be used to scrape data about other users.</p>
+    <p>No system is perfectly secure. If we discover a breach affecting personal data, we will notify affected users and the relevant supervisory authority within 72 hours where required by law.</p>
+
+    <h2 id="kill-switch">10. Kill switch</h2>
+    <p>We maintain a remote kill switch that can disable analytics collection across all installs of the app within one launch cycle. We use this if a privacy issue is discovered or if the analytics infrastructure needs to be paused. When the kill switch is active, no events are sent regardless of your in-app setting.</p>
+
+    <h2 id="iap">11. In-app purchases</h2>
+    <p>Caesura sells a one-time "Pro" unlock through Apple's App Store. Apple processes the payment. We never see your payment method, billing address, or Apple ID. Apple shares anonymized purchase information with us (via App Store Server Notifications) so that the app can verify your purchase. To allow us to correlate Pro entitlement status with the analytics event log without linking to your Apple ID, we attach the same pseudonymous device identifier described in Section 3 to the StoreKit transaction (<code>appAccountToken</code>). Apple's privacy policy, not ours, governs the payment data: <a href="https://www.apple.com/legal/privacy">apple.com/legal/privacy</a>.</p>
+
+    <h2 id="changes">12. Changes to this policy</h2>
+    <p>We will update this policy if we change what we collect, why we collect it, where it is stored, or how long we keep it. The "Last updated" date at the top will change whenever we make a substantive update. For material changes — for example, adding a new category of data — we will surface a notice in the app on next launch and require you to re-confirm your analytics choice.</p>
+    <p>We will not retroactively apply a less protective policy to data that was collected under a more protective one.</p>
+
+    <h2 id="contact">13. Contact</h2>
+    <p>For any question about this policy or about your data: <strong><span class="placeholder">[hello@YOUR-DOMAIN.example]</span></strong></p>
+    <p>We aim to respond within 7 days, and within 30 days for formal data subject requests as required by GDPR.</p>
+  </main>
+</body>
+</html>
